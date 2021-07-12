@@ -35,3 +35,23 @@ if ($inputName -eq $myName){
 } else {
     Write-Host NO
 }
+
+# More then 10 is too much 
+Write-Host Enter a number 
+$inputNumber = Read-Host
+
+if($inputNumber -gt 10){
+    Write-Host TOO MUCH
+}else {
+    Write-Host NOT TOO MUCH
+}
+
+# Write NOOOO if the first number is gt 10, and the sec is lt 6
+Write-Host Enter a number
+$firstNumber = Read-Host
+Write-Host Enter another number
+$secNumber = Read-Host
+
+ if (($firstNumber -gt 10) -and ($secNumber -lt 6)){
+     Write-Host NOOOO
+ }
