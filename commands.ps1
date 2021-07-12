@@ -67,11 +67,35 @@
 #  # Get all running and stopped services
 #  Get-Service
 
- # Add 10 random numbers to an array
- $list = New-Object Collections.Generic.List[Int]
+# #  # Add 10 random numbers to an array
+#  $list = New-Object Collections.Generic.List[Int]
  
- for ($i = 0; $i -lt 10; $i++){
-     $randomNmber = Get-Random
-     $list.Add($randomNmber)
- }
+#  for ($i = 0; $i -lt 10; $i++){
+#      $randomNmber = Get-Random
+#      $list.Add($randomNmber)
+#  }
 
+# # Get th elargest number in the array
+# $maxNum = $list | Measure-Object -Maximum | Select-Object Maximum
+# Write-Host $maxNum.Maximum
+
+# write-host ([array]::IndexOf($list.ToArray(), [int]$maxNum.Maximum))
+
+# # Get all the services with svc include in the name 
+# Get-Service -name *svc*
+
+# # Get all runing services
+# Get-Service | Where-Object {$_.Status -eq "Running"}
+
+# #check if a user is an admin or not
+# Get-LocalGroupMember -Group "Administrators"
+
+# #change remote control cmputer name and restart
+# Rename-Computer -ComputerName "yaelh" -NewName "hamamiy" -Force -Restart
+
+function PrintArgs()
+{
+    Write-Host "You passed $($args.Count) arguments"
+}
+
+PrintArgs 2 h i p 
