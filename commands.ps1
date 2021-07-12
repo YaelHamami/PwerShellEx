@@ -55,3 +55,11 @@ $secNumber = Read-Host
  if (($firstNumber -gt 10) -and ($secNumber -lt 6)){
      Write-Host NOOOO
  }
+
+ #get all the running processes on the pc sort by the id
+ if ((get-process).Count -gt 50){
+     write-host -ForegroundColor red "TOO MUCH"
+ }
+
+ # get all name and id of the running processes, decricing by id 
+ get-process | Select-Object name, id | Sort-Object id -Descending
