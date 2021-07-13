@@ -98,7 +98,7 @@ function PrintArgs()
     Write-Host "You passed $($args.Length) arguments"
 }
 
-PrintArgs 2 h i p 
+PrintArgs 2 h i p k
 
 
 
