@@ -99,8 +99,3 @@ function PrintArgs()
 }
 
 PrintArgs 2 h i p k
-
-
-
-
-
